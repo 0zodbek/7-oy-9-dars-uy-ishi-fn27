@@ -27,7 +27,7 @@ function AddStudentModal({ isOpen, onClose }) {
               placeholder="Ism"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <div className="mb-6">
@@ -36,19 +36,19 @@ function AddStudentModal({ isOpen, onClose }) {
               placeholder="Yosh"
               value={age}
               onChange={(e) => setAge(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <div className="flex justify-between">
             <button
               onClick={handleSubmit}
-              className="w-full mr-2 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200"
+              className="w-full mr-2 bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 transition duration-200 shadow-md"
             >
               Qo'shish
             </button>
             <button
               onClick={onClose}
-              className="w-full ml-2 bg-gray-300 text-gray-700 py-2 rounded-md hover:bg-gray-400 transition duration-200"
+              className="w-full ml-2 bg-gray-200 text-gray-800 py-2 rounded-md hover:bg-gray-300 transition duration-200 shadow-md"
             >
               Bekor qilish
             </button>

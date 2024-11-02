@@ -16,37 +16,37 @@ function Students() {
       <div className="flex justify-center space-x-4 mb-8">
         <button
           onClick={() => setAddModalOpen(true)}
-          className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-200"
+          className="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-200 shadow-md"
         >
           Talaba Qo'shish
         </button>
         <button
           onClick={() => dispatch(clearAllStudents())}
-          className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-200"
+          className="bg-rose-500 text-white py-2 px-4 rounded-lg hover:bg-rose-600 transition duration-200 shadow-md"
         >
           Barchasini O'chirish
         </button>
       </div>
 
-      <ul className="space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {students.map((student) => (
-          <li
+          <div
             key={student.id}
-            className="flex items-center justify-between bg-gray-100 p-4 rounded-lg shadow-sm"
+            className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
           >
             <div>
-              <p className="text-lg font-medium text-gray-800">{student.name}</p>
-              <p className="text-sm text-gray-600">{student.age} yosh</p>
+              <p className="text-xl font-semibold text-gray-900">{student.name}</p>
+              <p className="text-sm text-gray-700">{student.age} yosh</p>
             </div>
             <button
               onClick={() => dispatch(deleteStudent(student.id))}
-              className="text-red-500 hover:text-red-700 transition duration-200"
+              className="mt-4 text-rose-500 hover:text-rose-700 transition duration-200"
             >
               O'chirish
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <AddStudentModal isOpen={isAddModalOpen} onClose={() => setAddModalOpen(false)} />
     </div>

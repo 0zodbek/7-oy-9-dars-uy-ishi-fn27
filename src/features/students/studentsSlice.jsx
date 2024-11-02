@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   students: [
-    { id: 1, name: "Ali", age: 18 },
-    { id: 2, name: "Vali", age: 20 }
+    { id: 1, name: "AZAM", age: 18 },
+    { id: 2, name: "BAXROM", age: 20 }
   ],
 };
 
